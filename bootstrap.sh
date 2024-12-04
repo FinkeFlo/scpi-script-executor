@@ -13,13 +13,13 @@ mkdir -p 'lib'
 (
     cd lib || exit 1
     curl -f -O --cookie 'eula_3_1_agreed=tools.hana.ondemand.com/developer-license-3_1.txt' \
-        'https://tools.hana.ondemand.com/additional/com.sap.it.public.generic.api-2.22.0.jar'
+        'https://tools.eu1.hana.ondemand.com/additional/com.sap.it.public.generic.api-2.25.0.jar'
     if [ "$?" -ne "0" ]; then
         echo "Generic API not found; update links with latest version from https://tools.hana.ondemand.com/#cloudintegration"
         exit 1
     fi
     curl -f -O --cookie 'eula_3_1_agreed=tools.hana.ondemand.com/developer-license-3_1.txt' \
-        'https://tools.hana.ondemand.com/additional/cloud.integration.script.apis-2.7.1.jar'
+        'https://tools.eu1.hana.ondemand.com/additional/cloud.integration.script.apis-2.7.1.jar'
     if [ "$?" -ne "0" ]; then
         echo "Scripting API not found; update links with latest version from https://tools.hana.ondemand.com/#cloudintegration"
         exit 1
